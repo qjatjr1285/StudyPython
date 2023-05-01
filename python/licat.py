@@ -30,3 +30,5 @@ print(이름)
 print(나이)
 # print(오늘_잡은_물고기)
 print(설명[::-1])
+
+print(dir(기술))
