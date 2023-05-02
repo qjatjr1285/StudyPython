@@ -1,7 +1,8 @@
-r = ""
-for i in input():
+str = input()
+index = ""
+for i in str:
     if i.islower():
-        r += i.upper()
+        index += i.upper()
     else:
-        r += i.lower()
-print(r)
+        index += i.lower()
+print(index)
