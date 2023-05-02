@@ -13,34 +13,40 @@ b = int(b)
 print(a * b)
 
 # 대소문자 바꿔서 출력하기
-
+str = input()
+index = ""
+for i in str:
+    if i.islower():
+        index += i.upper()
+    else:
+        index += i.lower()
+print(index)
 
 # 특수문자 출력하기
 
 
 # 덧셈식 출력하기
-
+a, b = map(int, input().strip().split(' '))
+print(f'{a} + {b} = {a + b}')
 
 # 문자열 붙여서 출력하기
-
+str1, str2 = input().strip().split(' ')
+print(f'{str1}{str2}')
+#print(str1 + str2)
+#print(input().strip().replace(' ', ''))
 
 # 문자열 돌리기
-
+str = input()
+for i in str:
+    print(i)
 	
-# 특수문자 출력하기
-
-
-# 덧셈식 출력하기
-
-
-# 문자열 붙여서 출력하기
-
-
-# 문자열 돌리기
-
 
 # 홀짝 구분하기
-
+a = int(input())
+if a % 2 == 0:
+    print(f'{a} is even')
+else:
+    print(f'{a} is odd')
 
 # 문자열 겹쳐쓰기
 
