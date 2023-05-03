@@ -23,7 +23,7 @@ for i in str:
 print(index)
 
 # 특수문자 출력하기
-
+print('!@#$%^&*(\\\'"<>?:;')
 
 # 덧셈식 출력하기
 a, b = map(int, input().strip().split(' '))
@@ -58,19 +58,37 @@ else:
 
 
 # 문자열 곱하기
-
+def solution(my_string, k):
+    answer = my_string * k
+    return answer
 
 # 더 크게 합치기
+def solution(a, b):  
+    if (str(a) + str(b)) > (str(b) + str(a)):
+        answer = str(a) + str(b)
+    elif (str(a) + str(b)) == (str(b) + str(a)):
+        answer = str(a) + str(b)
+    else:
+        answer = str(b) + str(a)
+    return int(answer)
 
+def solution(a, b):
+    return int(max(f"{a}{b}", f"{b}{a}"))
 
 # 두 수의 연산값 비교하기
-
+def solution(a, b):
+    return max(int(f"{a}{b}"), a*b*2)
 
 # n의 배수
+def solution(num, n):
+    return 1 if num % n == 0 else 0
+# 파이썬의 삼항연산자
+# [참일때] if [조건문] else [거짓일때]
 
 
 # 공배수
-
+def solution(number, n, m):
+    return 1 if number % n == 0 and number % m == 0 else 0
 
 # 홀짝에 따라 다른 값 반환하기
 
