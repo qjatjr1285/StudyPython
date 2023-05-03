@@ -1,8 +1,5 @@
-str = input()
-index = ""
-for i in str:
-    if i.islower():
-        index += i.upper()
-    else:
-        index += i.lower()
-print(index)
+def solution(arr):
+    
+    for i in arr:
+        answer += arr[i]
+    return answer
