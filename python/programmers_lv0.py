@@ -55,7 +55,8 @@ else:
 
 
 # 문자 리스트를 문자열로 변환하기
-
+def solution(arr):
+    return ''.join(arr)
 
 # 문자열 곱하기
 def solution(my_string, k):
