@@ -128,7 +128,7 @@ def solution(a, b, c):
 def solution(num_list):
     cnt = 1
     for i in num_list:
-        cnt *= i
+        cnt *= i 
     return 1 if (sum(num_list) ** 2) > cnt else 0
 
 
