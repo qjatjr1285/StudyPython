@@ -49,7 +49,13 @@ else:
     print(f'{a} is odd')
 
 # 문자열 겹쳐쓰기
-
+def solution(my_string, overwrite_string, s):
+    os_len = len(overwrite_string) + s
+    return my_string[:s] + overwrite_string + my_string[os_len:]
+# -- 안되는 예제
+def solution(my_string, overwrite_string, s):
+    os_len = len(overwrite_string) + s
+    return my_string.replace(my_string[s:os_len], overwrite_string)
 
 # 문자열 섞기
 
@@ -119,6 +125,11 @@ def solution(a, b, c):
     return cnt
 
 # 원소들의 곱과 합
+def solution(num_list):
+    cnt = 1
+    for i in num_list:
+        cnt *= i
+    return 1 if (sum(num_list) ** 2) > cnt else 0
 
 
 # 이어 붙인 수
