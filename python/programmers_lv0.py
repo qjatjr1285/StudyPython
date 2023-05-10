@@ -58,7 +58,12 @@ def solution(my_string, overwrite_string, s):
     return my_string.replace(my_string[s:os_len], overwrite_string)
 
 # 문자열 섞기
-
+def solution(str1, str2):
+    answer = ''
+    for i in range(len(str1)):
+        answer += str1[i]
+        answer += str2[i]
+    return answer
 
 # 문자 리스트를 문자열로 변환하기
 def solution(arr):
@@ -187,6 +192,10 @@ def solution(num_list):
 
 
 # 문자열 여러 번 뒤집기
+
+
+
+
 
 
 
