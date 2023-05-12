@@ -198,11 +198,18 @@ def solution(angle):
 
 
 # 양꼬치
-
+def solution(n, k):
+    result = (12000 * n) + (2000 * k) - ((n // 10) * 2000)
+    return result
 
 
 # 짝수의 합
-
+def solution(n):
+    answer = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            answer += i
+    return answer
 
 
 # Day 8
