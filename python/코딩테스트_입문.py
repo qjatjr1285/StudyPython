@@ -138,3 +138,71 @@ def solution(num_list):
 
 def solution(num_list):
     return num_list[::-1]
+
+# Day 6 문자열, 반복문, 출력, 배열, 조건문
+# 문자열 뒤집기
+def solution(my_string):
+    return my_string[::-1]
+
+
+# 직각삼각형 출력하기
+n = int(input())
+for i in range(n):
+    for j in range(i+1):
+        print('*', end='')
+    print('')
+
+
+# 짝수 홀수 개수
+def solution(num_list):
+    odd_cnt = 0
+    even_cnt = 0
+    for i in range(len(num_list)):
+        if num_list[i] % 2 == 0:
+            even_cnt += 1
+        else:
+            odd_cnt += 1
+    answer = [even_cnt, odd_cnt]
+    return answer
+
+
+# 문자 반복 출력하기
+def solution(my_string, n):
+    answer = []
+    
+    for i in range(0, len(my_string)):
+        answer.append(my_string[i] * n)
+        
+    answer = ''.join(answer)
+    return answer
+
+
+# Day 7 문자열, 조건문, 수학, 반복문
+# 특정 문자 제거하기
+def solution(my_string, letter):
+    return my_string.replace(letter,'')
+
+
+# 각도기
+def solution(angle):
+    idx = 0
+    if 0 < angle < 90:
+        idx = 1
+    elif angle == 90:
+        idx = 2
+    elif 90 < angle < 180:
+        idx = 3
+    elif angle == 180:
+        idx = 4
+    return idx
+
+
+# 양꼬치
+
+
+
+# 짝수의 합
+
+
+
+# Day 8
