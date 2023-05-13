@@ -211,4 +211,62 @@ def solution(n):
             answer += i
     return answer
 
-# Day 8
+# Day 8 배열, 구현, 수학
+# 배열 자르기
+
+
+
+# 외계행성의 나이
+def solution(age):
+    answer = ''
+    li = list(str(age))
+    for i in range(len(li)):
+        if li[i] == '0':
+            answer += 'a'
+        elif li[i] == '1':
+            answer += 'b'
+        elif li[i] == '2':
+            answer += 'c'
+        elif li[i] == '3':
+            answer += 'd'
+        elif li[i] == '4':
+            answer += 'e'
+        elif li[i] == '5':
+            answer += 'f'
+        elif li[i] == '6':
+            answer += 'g'
+        elif li[i] == '7':
+            answer += 'h'
+        elif li[i] == '8':
+            answer += 'i'
+        elif li[i] == '9':
+            answer += 'j'
+    return answer
+solution(23)
+
+
+# 진료순서 정하기
+
+
+
+# 순서쌍의 개수
+
+
+
+# Day 9 수학, 문자열, 해시, 완전탐색, 조건문
+# 개미 군단
+
+
+
+# 모스 부호(1)
+
+
+
+# 가위 바위 보
+
+
+
+# 구슬을 나누는 경우의 수
+
+
+
