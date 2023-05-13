@@ -246,7 +246,13 @@ solution(23)
 
 
 # 진료순서 정하기
-
+def solution(emergency):
+    arr = sorted(emergency, reverse=True)
+    
+    answer = []
+    for i in emergency:
+        answer.append(arr.index(i)+1)     
+    return answer
 
 
 # 순서쌍의 개수
