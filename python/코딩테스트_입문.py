@@ -213,7 +213,8 @@ def solution(n):
 
 # Day 8 배열, 구현, 수학
 # 배열 자르기
-
+def solution(numbers, num1, num2):
+    return numbers[num1:num2+1]
 
 
 # 외계행성의 나이
