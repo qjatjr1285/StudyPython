@@ -252,7 +252,7 @@ def solution(emergency):
     answer = []
     for i in emergency:
         answer.append(arr.index(i)+1)     
-    return answer
+    return answer 
 
 
 # 순서쌍의 개수
