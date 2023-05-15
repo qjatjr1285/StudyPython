@@ -248,7 +248,7 @@ solution(23)
 
 
 # 진료순서 정하기
- def solution(emergency):
+def solution(emergency):
     arr = sorted(emergency, reverse=True)
     
     answer = []
@@ -306,7 +306,7 @@ def fact(x):
     for i in range(1, x+1):
         result *= i
     return result
-=======
+
 # Day 1 사칙연산
 # 두 수의 합
 def solution(num1, num2):
