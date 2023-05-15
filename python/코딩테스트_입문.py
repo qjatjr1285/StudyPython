@@ -248,7 +248,7 @@ solution(23)
 
 
 # 진료순서 정하기
- def solution(emergency):
+def solution(emergency):
     arr = sorted(emergency, reverse=True)
     
     answer = []
@@ -306,7 +306,7 @@ def fact(x):
     for i in range(1, x+1):
         result *= i
     return result
-=======
+
 # Day 1 사칙연산
 # 두 수의 합
 def solution(num1, num2):
@@ -579,11 +579,27 @@ solution(23)
 
 
 # 가위 바위 보
+def solution(rsp):
+    answer = ''
+    for i in rsp:
+        if i == '2':
+            answer += '0' 
+        elif i == '0':
+            answer += '5'
+        elif i == '5':
+            answer += '2'
+    return answer
 
-
+def solution(rsp):
+    d = {'0':'5','2':'0','5':'2'}
+    return ''.join(d[i] for i in rsp)
 
 # 구슬을 나누는 경우의 수
-
-
-
->>>>>>> a3aea194a7d2408dd2ad33fbdebb09c3c04e167e
+def solution(balls, share):
+    return fact(balls) / (fact(share) * fact(balls-share))
+    
+def fact(x):
+    result = 1
+    for i in range(1, x+1):
+        result *= i
+    return result
