@@ -270,10 +270,38 @@ solution(23)
 
 
 # 가위 바위 보
+def solution(rsp):
+    answer = ''
+    for i in rsp:
+        if i == '2':
+            answer += '0' 
+        elif i == '0':
+            answer += '5'
+        elif i == '5':
+            answer += '2'
+    return answer
 
-
+def solution(rsp):
+    d = {'0':'5','2':'0','5':'2'}
+    return ''.join(d[i] for i in rsp)
 
 # 구슬을 나누는 경우의 수
+def solution(balls, share):
+    f1 = f2 = f3 = 1
+    for i in range(1, balls+1):
+        f1 *= i
+    for i in range(1, share+1):
+        f2 *= i
+    for i in range(1, balls-share+1):
+        f3 *= i
+    return f1 / (f2 * f3)
 
-
-
+#============================
+def solution(balls, share):
+    return fact(balls) / (fact(share) * fact(balls-share))
+    
+def fact(x):
+    result = 1
+    for i in range(1, x+1):
+        result *= i
+    return result
