@@ -566,15 +566,54 @@ def solution(emergency):
 
 
 # 순서쌍의 개수
-
+def solution(n):
+    cnt = 0
+    for i in range(1, n+1):
+        if n % i == 0:
+            cnt += 1
+    return cnt
 
 
 # Day 9 수학, 문자열, 해시, 완전탐색, 조건문
 # 개미 군단
+def solution(hp):
+    # 장군개미의 공격력 a, 병정개미의 공격력 b, 일개미의 공격력 c
+    a, b, c = 5, 3, 1
+    
+    # 개미의 수를 최대한 줄이기 위해 장군개미를 최대한으로 사용
+    max_a_count = hp // a
+    min_count = hp
+    
+    # 모든 경우의 수 계산
+    for a_count in range(max_a_count, -1, -1):
+        for b_count in range((hp - a_count * a) // b, -1, -1):
+            c_count = hp - (a_count * a) - (b_count * b)
+            if c_count >= 0 and c_count % c == 0:
+                total_count = a_count + b_count + (c_count // c)
+                if total_count < min_count:
+                    min_count = total_count
+    
+    return min_count
 
+def solution(hp):    
+    return hp // 5 + (hp % 5 // 3) + ((hp % 5) % 3)
 
 
 # 모스 부호(1)
+def solution(letter):
+    morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+    }
+    answer= ""
+    codes = letter.split()
+    for i in codes:
+        answer += morse[i]
+
+    return answer
 
 
 
