@@ -556,7 +556,7 @@ solution(23)
 
 
 # 진료순서 정하기
- def solution(emergency):
+def solution(emergency):
     arr = sorted(emergency, reverse=True)
     
     answer = []
