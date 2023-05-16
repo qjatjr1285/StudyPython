@@ -206,3 +206,35 @@ def solution(my_string):
         if i not in result:
             result += i
     return result
+
+# 모음 제거
+def solution(my_string):
+    string = 'aeiou'
+    for i in string:
+        my_string = my_string.replace(i,'')
+    return my_string
+
+
+# 특정 문자 제거하기
+def solution(my_string, letter):
+    for i in letter:
+        my_string = my_string.replace(i,'')
+    return my_string
+
+# 숨어있는 숫자의 덧셈(1)
+def solution(my_string):
+    cnt = 0
+    for i in my_string:
+        if i.isdigit():
+            cnt += int(i)
+    return cnt
+
+def solution(my_string):
+    return sum([int(i) for i in my_string if i.isdigit()])
+
+def solution(my_string):
+    return sum(map(int, filter(lambda x:x.isdigit(), my_string)))
+
+import re
+def solution(my_string):
+    return sum([int(i) for i in re.sub('[^1-9]', '', my_string)])
