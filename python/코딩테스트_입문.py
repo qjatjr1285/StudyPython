@@ -642,3 +642,49 @@ def fact(x):
     for i in range(1, x+1):
         result *= i
     return result
+
+# Day 10 조건문, 배열, 수학, 시뮬레이션
+# 점의 위치 구하기
+def solution(dot):
+    standard = 0
+    if dot[0] > standard:
+        if dot[1] > standard:
+            return 1
+        else:
+            return 4
+    else:
+        if dot[1] > standard:
+            return 2
+        else:
+            return 3
+
+
+# 2차원으로 만들기
+
+
+
+# 공 던지기
+
+
+
+# 배열 회전시키기
+def solution(numbers, direction):
+    return [numbers[-1]] + numbers[:-1] if direction == 'right' else numbers[1:] + [numbers[0]]
+
+
+# Day 11 수학, 반복문
+# 주사위의 갯수
+
+
+
+# 합성수 찾기
+
+
+
+# 최댓값 만들기(1)
+
+
+
+# 팩토리얼
+
+
