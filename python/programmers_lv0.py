@@ -257,3 +257,20 @@ def solution(array, height):
         if i > height:
             cnt += 1
     return cnt
+
+# 옹알이(1)
+import re
+
+def solution(babbling):
+    cnt = 0
+    li = ["aya", "ye", "woo", "ma"]
+    for i in babbling:
+        for j in li:
+            if j * 2 not in i:
+                i = i.replace(j, ' ')
+        if len(i.strip()) == 0:
+            cnt += 1
+
+    return cnt
+
+
