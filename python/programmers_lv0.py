@@ -238,3 +238,22 @@ def solution(my_string):
 import re
 def solution(my_string):
     return sum([int(i) for i in re.sub('[^1-9]', '', my_string)])
+
+# 숨어있는 숫자의 덧셈(2)
+import re
+
+def solution(my_string):
+    return sum(map(int, re.findall(r'[0-9]+', my_string)))
+
+
+# 중복된 숫자 갯수
+def solution(array, n):
+    return array.count(n)
+
+# 머쓱이보다 키 큰 사람
+def solution(array, height):
+    cnt = 0
+    for i in array:
+        if i > height:
+            cnt += 1
+    return cnt
