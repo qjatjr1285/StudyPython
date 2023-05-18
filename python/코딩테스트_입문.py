@@ -682,7 +682,12 @@ def solution(numbers, direction):
 
 
 # 최댓값 만들기(1)
-
+def solution(numbers):
+    a = max(numbers)
+    numbers.remove(a)
+    b = max(numbers)
+    answer = a * b
+    return answer
 
 
 # 팩토리얼
