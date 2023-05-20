@@ -678,7 +678,7 @@ def solution(numbers, direction):
 
 
 # 합성수 찾기
-
+aaa
 
 
 # 최댓값 만들기(1)
