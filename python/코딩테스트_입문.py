@@ -1,46 +1,63 @@
-<<<<<<< HEAD
+<< << << < HEAD
 # Day 1 사칙연산
 # 두 수의 합
+
+
 def solution(num1, num2):
     return num1 + num2
 
 # 두 수의 차
+
+
 def solution(num1, num2):
     return num1 - num2
 
 # 두 수의 곱
+
+
 def solution(num1, num2):
     return num1 * num2
 
 # 몫 구하기
+
+
 def solution(num1, num2):
     return num1 // num2
 
 # Day 2 사칙연산, 조건문, 배열
 # 두 수의 나눗셈
+
+
 def solution(num1, num2):
     return int((num1 / num2) * 1000)
 
 # 숫자 비교하기
+
+
 def solution(num1, num2):
     return 1 if num1 == num2 else -1
 
 # 분수의 덧셈
+
+
 def gcd(a, b):
     while b > 0:
         a, b = b, a % b
     return a
 
+
 def solution(numer1, denom1, numer2, denom2):
     bm = denom1 * denom2
     bj = (numer1 * denom2) + (numer2 * denom1)
-    
+
     a = gcd(bm, bj)
-    
+
     answer = [bj // a, bm // a]
     return answer
 
 # 배열 두 배 만들기
+
+
 def solution(numbers):
     answer = []
     for i in numbers:
@@ -49,23 +66,32 @@ def solution(numbers):
 
 # Day 3 사칙연산, 배열, 수학
 # 나머지 구하기
+
+
 def solution(num1, num2):
     return num1 % num2
 
 # 중앙값 구하기
+
+
 def solution(array):
     array.sort()
-    return array[len(array) // 2 ]
+    return array[len(array) // 2]
 
 # 최빈값 구하기
+
+
 def solution(array):
     while len(array) != 0:
         for i, a in enumerate(set(array)):
             array.remove(a)
-        if i == 0: return a
+        if i == 0:
+            return a
     return -1
 
 # 짝수는 싫어요
+
+
 def solution(n):
     arr = []
     for i in range(n+1):
@@ -83,6 +109,8 @@ def solution(n):
         return n // 7 + 1
 
 # 피자 나눠 먹기(2)
+
+
 def solution(n):
     if n % 6 == 0:
         return n // 6
@@ -99,13 +127,16 @@ def solution(slice, n):
     else:
         return n // slice + 1
 
+
 def solution(slice, n):
     return n // slice if n % slice == 0 else n // slice + 1
 
 # 배열의 평균값
+
+
 def solution(numbers):
     return sum(numbers) / len(numbers)
-    
+
 
 # Day 5 수학, 배열
 # 옷가게 할인 받기
@@ -119,6 +150,8 @@ def solution(price):
     return int(price)
 
 # 아이스 아메리카노
+
+
 def solution(money):
     cnt = exchange = 0
     cnt = money // 5500
@@ -126,22 +159,30 @@ def solution(money):
     return [cnt, exchange]
 
 # 나이 출력
+
+
 def solution(age):
     return 2022 - age + 1
 
 # 배열 뒤집기
+
+
 def solution(num_list):
     return list(reversed(num_list))
+
 
 def solution(num_list):
     num_list.reverse()
     return num_list
+
 
 def solution(num_list):
     return num_list[::-1]
 
 # Day 6 문자열, 반복문, 출력, 배열, 조건문
 # 문자열 뒤집기
+
+
 def solution(my_string):
     return my_string[::-1]
 
@@ -170,10 +211,10 @@ def solution(num_list):
 # 문자 반복 출력하기
 def solution(my_string, n):
     answer = []
-    
+
     for i in range(0, len(my_string)):
         answer.append(my_string[i] * n)
-        
+
     answer = ''.join(answer)
     return answer
 
@@ -181,7 +222,7 @@ def solution(my_string, n):
 # Day 7 문자열, 조건문, 수학, 반복문
 # 특정 문자 제거하기
 def solution(my_string, letter):
-    return my_string.replace(letter,'')
+    return my_string.replace(letter, '')
 
 
 # 각도기
@@ -214,6 +255,8 @@ def solution(n):
 
 # Day 8 배열, 구현, 수학
 # 배열 자르기
+
+
 def solution(numbers, num1, num2):
     return numbers[num1:num2+1]
 
@@ -244,30 +287,29 @@ def solution(age):
         elif li[i] == '9':
             answer += 'j'
     return answer
+
+
 solution(23)
 
 
 # 진료순서 정하기
 def solution(emergency):
     arr = sorted(emergency, reverse=True)
-    
+
     answer = []
     for i in emergency:
-        answer.append(arr.index(i)+1)     
+        answer.append(arr.index(i)+1)
     return answer
 
 
 # 순서쌍의 개수
 
 
-
 # Day 9 수학, 문자열, 해시, 완전탐색, 조건문
 # 개미 군단
 
 
-
 # 모스 부호(1)
-
 
 
 # 가위 바위 보
@@ -275,18 +317,21 @@ def solution(rsp):
     answer = ''
     for i in rsp:
         if i == '2':
-            answer += '0' 
+            answer += '0'
         elif i == '0':
             answer += '5'
         elif i == '5':
             answer += '2'
     return answer
 
+
 def solution(rsp):
-    d = {'0':'5','2':'0','5':'2'}
+    d = {'0': '5', '2': '0', '5': '2'}
     return ''.join(d[i] for i in rsp)
 
 # 구슬을 나누는 경우의 수
+
+
 def solution(balls, share):
     f1 = f2 = f3 = 1
     for i in range(1, balls+1):
@@ -297,10 +342,13 @@ def solution(balls, share):
         f3 *= i
     return f1 / (f2 * f3)
 
-#============================
+# ============================
+
+
 def solution(balls, share):
     return fact(balls) / (fact(share) * fact(balls-share))
-    
+
+
 def fact(x):
     result = 1
     for i in range(1, x+1):
@@ -309,46 +357,63 @@ def fact(x):
 
 # Day 1 사칙연산
 # 두 수의 합
+
+
 def solution(num1, num2):
     return num1 + num2
 
 # 두 수의 차
+
+
 def solution(num1, num2):
     return num1 - num2
 
 # 두 수의 곱
+
+
 def solution(num1, num2):
     return num1 * num2
 
 # 몫 구하기
+
+
 def solution(num1, num2):
     return num1 // num2
 
 # Day 2 사칙연산, 조건문, 배열
 # 두 수의 나눗셈
+
+
 def solution(num1, num2):
     return int((num1 / num2) * 1000)
 
 # 숫자 비교하기
+
+
 def solution(num1, num2):
     return 1 if num1 == num2 else -1
 
 # 분수의 덧셈
+
+
 def gcd(a, b):
     while b > 0:
         a, b = b, a % b
     return a
 
+
 def solution(numer1, denom1, numer2, denom2):
     bm = denom1 * denom2
     bj = (numer1 * denom2) + (numer2 * denom1)
-    
+
     a = gcd(bm, bj)
-    
+
     answer = [bj // a, bm // a]
     return answer
 
 # 배열 두 배 만들기
+
+
 def solution(numbers):
     answer = []
     for i in numbers:
@@ -357,23 +422,32 @@ def solution(numbers):
 
 # Day 3 사칙연산, 배열, 수학
 # 나머지 구하기
+
+
 def solution(num1, num2):
     return num1 % num2
 
 # 중앙값 구하기
+
+
 def solution(array):
     array.sort()
-    return array[len(array) // 2 ]
+    return array[len(array) // 2]
 
 # 최빈값 구하기
+
+
 def solution(array):
     while len(array) != 0:
         for i, a in enumerate(set(array)):
             array.remove(a)
-        if i == 0: return a
+        if i == 0:
+            return a
     return -1
 
 # 짝수는 싫어요
+
+
 def solution(n):
     arr = []
     for i in range(n+1):
@@ -391,6 +465,8 @@ def solution(n):
         return n // 7 + 1
 
 # 피자 나눠 먹기(2)
+
+
 def solution(n):
     if n % 6 == 0:
         return n // 6
@@ -407,13 +483,16 @@ def solution(slice, n):
     else:
         return n // slice + 1
 
+
 def solution(slice, n):
     return n // slice if n % slice == 0 else n // slice + 1
 
 # 배열의 평균값
+
+
 def solution(numbers):
     return sum(numbers) / len(numbers)
-    
+
 
 # Day 5 수학, 배열
 # 옷가게 할인 받기
@@ -427,6 +506,8 @@ def solution(price):
     return int(price)
 
 # 아이스 아메리카노
+
+
 def solution(money):
     cnt = exchange = 0
     cnt = money // 5500
@@ -434,22 +515,30 @@ def solution(money):
     return [cnt, exchange]
 
 # 나이 출력
+
+
 def solution(age):
     return 2022 - age + 1
 
 # 배열 뒤집기
+
+
 def solution(num_list):
     return list(reversed(num_list))
+
 
 def solution(num_list):
     num_list.reverse()
     return num_list
+
 
 def solution(num_list):
     return num_list[::-1]
 
 # Day 6 문자열, 반복문, 출력, 배열, 조건문
 # 문자열 뒤집기
+
+
 def solution(my_string):
     return my_string[::-1]
 
@@ -478,10 +567,10 @@ def solution(num_list):
 # 문자 반복 출력하기
 def solution(my_string, n):
     answer = []
-    
+
     for i in range(0, len(my_string)):
         answer.append(my_string[i] * n)
-        
+
     answer = ''.join(answer)
     return answer
 
@@ -489,7 +578,7 @@ def solution(my_string, n):
 # Day 7 문자열, 조건문, 수학, 반복문
 # 특정 문자 제거하기
 def solution(my_string, letter):
-    return my_string.replace(letter,'')
+    return my_string.replace(letter, '')
 
 
 # 각도기
@@ -522,6 +611,8 @@ def solution(n):
 
 # Day 8 배열, 구현, 수학
 # 배열 자르기
+
+
 def solution(numbers, num1, num2):
     return numbers[num1:num2+1]
 
@@ -552,16 +643,15 @@ def solution(age):
         elif li[i] == '9':
             answer += 'j'
     return answer
-solution(23)
 
 
 # 진료순서 정하기
 def solution(emergency):
     arr = sorted(emergency, reverse=True)
-    
+
     answer = []
     for i in emergency:
-        answer.append(arr.index(i)+1)     
+        answer.append(arr.index(i)+1)
     return answer
 
 
@@ -579,11 +669,11 @@ def solution(n):
 def solution(hp):
     # 장군개미의 공격력 a, 병정개미의 공격력 b, 일개미의 공격력 c
     a, b, c = 5, 3, 1
-    
+
     # 개미의 수를 최대한 줄이기 위해 장군개미를 최대한으로 사용
     max_a_count = hp // a
     min_count = hp
-    
+
     # 모든 경우의 수 계산
     for a_count in range(max_a_count, -1, -1):
         for b_count in range((hp - a_count * a) // b, -1, -1):
@@ -592,23 +682,24 @@ def solution(hp):
                 total_count = a_count + b_count + (c_count // c)
                 if total_count < min_count:
                     min_count = total_count
-    
+
     return min_count
 
-def solution(hp):    
+
+def solution(hp):
     return hp // 5 + (hp % 5 // 3) + ((hp % 5) % 3)
 
 
 # 모스 부호(1)
 def solution(letter):
-    morse = { 
-    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
-    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
-    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
-    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
-    '-.--':'y','--..':'z'
+    morse = {
+        '.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.': 'f',
+        '--.': 'g', '....': 'h', '..': 'i', '.---': 'j', '-.-': 'k', '.-..': 'l',
+        '--': 'm', '-.': 'n', '---': 'o', '.--.': 'p', '--.-': 'q', '.-.': 'r',
+        '...': 's', '-': 't', '..-': 'u', '...-': 'v', '.--': 'w', '-..-': 'x',
+        '-.--': 'y', '--..': 'z'
     }
-    answer= ""
+    answer = ""
     codes = letter.split()
     for i in codes:
         answer += morse[i]
@@ -616,27 +707,30 @@ def solution(letter):
     return answer
 
 
-
 # 가위 바위 보
 def solution(rsp):
     answer = ''
     for i in rsp:
         if i == '2':
-            answer += '0' 
+            answer += '0'
         elif i == '0':
             answer += '5'
         elif i == '5':
             answer += '2'
     return answer
 
+
 def solution(rsp):
-    d = {'0':'5','2':'0','5':'2'}
+    d = {'0': '5', '2': '0', '5': '2'}
     return ''.join(d[i] for i in rsp)
 
 # 구슬을 나누는 경우의 수
+
+
 def solution(balls, share):
     return fact(balls) / (fact(share) * fact(balls-share))
-    
+
+
 def fact(x):
     result = 1
     for i in range(1, x+1):
@@ -645,6 +739,8 @@ def fact(x):
 
 # Day 10 조건문, 배열, 수학, 시뮬레이션
 # 점의 위치 구하기
+
+
 def solution(dot):
     standard = 0
     if dot[0] > standard:
@@ -660,28 +756,50 @@ def solution(dot):
 
 
 # 2차원으로 만들기
-
-
+def solution(num_list, n):
+    answer = []
+    for i in range(0, len(num_list), n):
+        answer.append(num_list[i:i+n])
+    return answer
 
 # 공 던지기
 
 
+def solution(numbers, k):
+    return numbers[2 * (k - 1) % len(numbers)]
 
 # 배열 회전시키기
+
+
 def solution(numbers, direction):
     return [numbers[-1]] + numbers[:-1] if direction == 'right' else numbers[1:] + [numbers[0]]
 
 
 # Day 11 수학, 반복문
 # 주사위의 갯수
-
+def solution(box, n):
+    a = box[0] // n
+    b = box[1] // n
+    c = box[2] // n
+    return a * b * c
 
 
 # 합성수 찾기
-aaa
-
+def solution(n):
+    cnt = 0
+    answer = 0
+    for i in range(1, n+1):
+        for j in range(1, i+1):
+            if i % j == 0:
+                cnt += 1
+        if cnt >= 3:
+            answer += 1
+        cnt = 0
+    return answer
 
 # 최댓값 만들기(1)
+
+
 def solution(numbers):
     a = max(numbers)
     numbers.remove(a)
@@ -699,5 +817,3 @@ def solution(n):
         factorial = factorial * answer
     answer -= 1
     return answer
-
-
