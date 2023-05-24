@@ -437,7 +437,18 @@ def solution(my_string):
     return sum([int(i) for i in re.sub('[^1-9]', '', my_string)])
 
 # 소인수분해
-
+def solution(n):
+    answer = []
+    i = 2
+    while 1:
+        if n == 1:
+            return answer
+        elif n % i == 0:
+            n = n / i
+            if i not in answer:
+                answer.append(i)
+        elif n % i != 0:
+            i += 1
 
 # Day 13 문자열, 배열, 사칙연산, 수학, 조건문
 # 컨트롤 제트
