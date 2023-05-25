@@ -452,12 +452,53 @@ def solution(n):
 
 # Day 13 문자열, 배열, 사칙연산, 수학, 조건문
 # 컨트롤 제트
-
+def solution(s):
+    arr = s.split(' ')
+    result = []
+    for i in arr:
+        if i == 'Z':
+            result.pop()
+        else:
+            result.append(int(i))
+    return sum(result)
 
 # 배열 원소의 길이
-
+def solution(strlist):
+    length = []
+    for i in strlist:
+        length.append(len(i))
+    return length
 
 # 중복된 문자 제거
-
+def solution(my_string):
+    result = ''
+    for i in my_string:
+        if i not in result:
+            result += i
+    return result
 
 # 삼각형의 완성조건(1)
+def solution(sides):
+    m = 0
+    n = 0
+    for i in sides:
+        n += i
+        if i > m:
+            m = i
+    return 1 if m < n-m else 2
+
+
+# Day 14 조건문, 반복문, 시뮬레이션, 문자열
+# 가까운 수
+
+
+
+# 369게임
+
+
+
+# 암호 해독
+
+
+
+# 대문자와 소문자
