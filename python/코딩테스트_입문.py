@@ -494,7 +494,11 @@ def solution(sides):
 
 
 # 369게임
+def solution(order):
+    return str(order).count('3') + str(order).count('6') + str(order).count('9')
 
+def solution(order):
+    return sum(map(lambda x: str(order).count(str(x)), [3, 6, 9]))
 
 
 # 암호 해독
