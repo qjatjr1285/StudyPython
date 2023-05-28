@@ -496,7 +496,7 @@ def solution(array, n):
 
     for i in array :
         temp.append( abs(n-i) )
-
+    # abs() - 절댓값 구하는 함수
     return array[temp.index(min(temp))]
 
 
@@ -521,3 +521,29 @@ def solution(cipher, code):
 
 
 # 대문자와 소문자
+def solution(my_string):
+    answer = ''
+    # ord()는 문자의 아스키코드 번호를 출력 ord('A') = 65
+    # chr()는 아스키코드 번호를 문자로 출력 chr(65) = A 
+    for i in range(len(my_string)):
+        if 64 <= ord(my_string[i]) < 97: #대문자면
+            answer += chr(ord(my_string[i]) + 32)
+        elif 97 <= ord(my_string[i]) < 123:
+            answer += chr(ord(my_string[i]) - 32)
+    return answer
+    
+
+# Day 15 문자열, 해시, 배열, 수학
+# 영어가 싫어요
+
+
+
+# 인덱스 바꾸기
+
+
+
+# 한 번만 등장한 문자
+
+
+
+# 약수 구하기
