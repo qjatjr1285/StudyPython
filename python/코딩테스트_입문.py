@@ -490,7 +490,14 @@ def solution(sides):
 
 # Day 14 조건문, 반복문, 시뮬레이션, 문자열
 # 가까운 수
+def solution(array, n):
+    array.sort()
+    temp = []
 
+    for i in array :
+        temp.append( abs(n-i) )
+
+    return array[temp.index(min(temp))]
 
 
 # 369게임
@@ -506,7 +513,7 @@ def solution(cipher, code):
     answer = ''
     for i in range(code-1, len(cipher), code):
         answer += cipher[i]
-    
+
     return answer
 
 def solution(cipher, code):
