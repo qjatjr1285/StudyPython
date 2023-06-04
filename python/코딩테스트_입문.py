@@ -555,7 +555,13 @@ def solution(my_string, num1, num2):
 
 
 # 한 번만 등장한 문자
-
+def solution(s):
+    li = []
+    for i in s:
+        if s.count(i) == 1:
+            li.append(i)
+            li = sorted(li)
+    return ''.join(li)
 
 
 # 약수 구하기
@@ -568,18 +574,40 @@ def solution(n):
 
 # Day 16 문자열, 수학, 배열, 조건문
 # 편지
-
-
+def solution(message):
+    return len(message)*2
 
 
 # 가장 큰 수 찾기
+def solution(array):
+    answer = []
+    answer.append(max(array))
+    answer.append(array.index(max(array)))
+    return answer
 
-
-
+def solution(array):
+    return [max(array), array.index(max(array))]
 
 # 문자열 계산하기
-
-
+def solution(my_string):
+    answer = 0
+    tmp = my_string.split()
+    answer += int(tmp[0])
+    for i in range(1,len(tmp)+1):
+        if i != len(tmp):
+            if tmp[i] == '+':
+                answer += int(tmp[i+1])
+            elif tmp[i] == '-':
+                answer -= int(tmp[i+1])
+            else:
+                continue
+    return answer
 
 
 # 배열의 유사도
+def solution(s1, s2):
+    answer = 0
+    for i in s1:
+        if i in s2:
+            answer += 1
+    return answer
