@@ -565,3 +565,21 @@ def solution(n):
         if n % i == 0:
             answer.append(i)
     return answer
+
+# Day 16 문자열, 수학, 배열, 조건문
+# 편지
+
+
+
+
+# 가장 큰 수 찾기
+
+
+
+
+# 문자열 계산하기
+
+
+
+
+# 배열의 유사도
