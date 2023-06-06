@@ -611,3 +611,54 @@ def solution(s1, s2):
         if i in s2:
             answer += 1
     return answer
+
+# Day 17 문자열, 수학, 조건문, 배열, 사칙연산
+# 숫자 찾기
+def solution(num, k):
+    answer = 0
+    snum = str(num)
+    sk = str(k)
+    if sk in snum:
+        return snum.find(sk) + 1
+    else:
+        return -1
+
+
+# n의 배수 고르기
+def solution(n, numlist):
+    answer = []
+    for i in numlist:
+        if i % n == 0:
+            answer.append(i)
+    return answer
+
+
+# 자릿수 더하기
+def solution(n):
+    answer = 0
+    li = list(str(n))
+    for i in li:
+        answer += int(i)
+    return answer
+
+
+# OX퀴즈
+
+
+
+# Day 18 문자열, 수학, 조건문, 정렬
+# 문자열안에 문자열
+
+
+
+# 제곱수 판별하기
+
+
+
+# 세균 증식
+
+
+
+# 문자열 정렬하기 (2)
+
+
