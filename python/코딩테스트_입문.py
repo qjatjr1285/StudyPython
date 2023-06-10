@@ -689,7 +689,8 @@ def solution(quiz):
 
 # Day 18 문자열, 수학, 조건문, 정렬
 # 문자열안에 문자열
-
+def solution(str1, str2):
+    return 1 if str2 in str1 else 2
 
 
 # 제곱수 판별하기
