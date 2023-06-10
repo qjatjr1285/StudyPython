@@ -694,7 +694,20 @@ def solution(str1, str2):
 
 
 # 제곱수 판별하기
+def solution(n):
+    m = n/2
+    for i in range(1000):
+        m -= i
+        if m < i:
+            if m*2 == i+1:
+                return 1
+            else: return 2
 
+def solution(n):
+    for i in range(1, n):
+        if n == i * i:
+            return 1
+    return 2
 
 
 # 세균 증식
