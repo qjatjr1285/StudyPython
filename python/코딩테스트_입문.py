@@ -643,7 +643,48 @@ def solution(n):
 
 
 # OX퀴즈
+# 얘는 런타임에러가 난다...
+def solution(quiz):
+    arr_quiz = []
+    answer = []
+    left = []
+    code = ''
+    
+    for i in range(len(quiz)):
+        arr_quiz = quiz[i].replace(' ','').split('=')
+        if '+' in arr_quiz[0]:
+            left = arr_quiz[0].split('+')
+            code = '+'
+        elif '-' in arr_quiz[0]:
+            left = arr_quiz[0].split('-')
+            code = '-'
+        if code == '+':
+            if (int(left[0]) + int(left[1])) == int(arr_quiz[1]):
+                answer.append('O')
+            else:
+                answer.append('X')
+        elif code == '-':
+            if (int(left[0]) - int(left[1])) == int(arr_quiz[1]):
+                answer.append('O')
+            else:
+                answer.append('X')
+    
+    return answer
 
+def solution(quiz):
+    answer = []
+    
+    for i in quiz:
+        l, r = i.split(' = ')
+        a, code, b = l.split()
+        if code == '+':
+            result = 'O' if int(a) + int(b) == int(r) else 'X'
+            answer.append(result)
+        else:
+            result = 'O' if int(a) - int(b) == int(r) else 'X'
+            answer.append(result)
+        
+    return answer
 
 
 # Day 18 문자열, 수학, 조건문, 정렬
