@@ -722,3 +722,23 @@ def solution(my_string):
     n = list(my_string.lower())
     return ''.join(sorted(n))
 
+# Day 19 문자열, 배열, 조건문
+# 7의 개수
+def solution(array):
+    answer = 0
+    for i in array:
+        answer += str(i).count('7')
+    return answer
+
+
+# 잘라서 배열로 저장하기
+
+
+
+# 중복된 숫자 개수
+
+
+
+# 머쓱이보다 키 큰 사람
+
+
