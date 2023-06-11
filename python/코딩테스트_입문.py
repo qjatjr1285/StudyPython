@@ -711,7 +711,10 @@ def solution(n):
 
 
 # 세균 증식
-
+def solution(n, t):
+    for i in range(t):
+        n *= 2
+    return n
 
 
 # 문자열 정렬하기 (2)
