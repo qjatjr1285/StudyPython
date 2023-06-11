@@ -740,7 +740,8 @@ def solution(my_str, n):
 
 
 # 중복된 숫자 개수
-
+def solution(array, n):
+    return array.count(n)
 
 
 # 머쓱이보다 키 큰 사람
