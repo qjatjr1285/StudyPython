@@ -752,3 +752,39 @@ def solution(array, height):
             cnt += 1
     return cnt
 
+# Day 20 수학, 시뮬레이션, 문자열, 사칙연산
+# 직사각형 넓이 구하기
+
+
+
+# 캐릭터의 좌표
+
+
+
+# 최댓값 만들기 (2)
+
+
+
+# 다항식 더하기
+
+
+
+# Day 21 문자열, 사칙연산, 시뮬레이션, 2차원배열, 수학, 배열
+# 숨어있는 숫자의 덧셈 (2)
+import re
+
+def solution(my_string):
+    return sum(map(int, re.findall(r'[0-9]+', my_string)))
+
+
+# 안전지대
+
+
+
+# 삼각형의 완성조건 (2)
+
+
+
+# 외계어 사전
+
+
