@@ -754,7 +754,8 @@ def solution(array, height):
 
 # Day 20 수학, 시뮬레이션, 문자열, 사칙연산
 # 직사각형 넓이 구하기
-
+def solution(dots):
+    return (max(dots)[0] - min(dots)[0])*(max(dots)[1] - min(dots)[1])
 
 
 # 캐릭터의 좌표
