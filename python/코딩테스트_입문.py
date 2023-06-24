@@ -767,7 +767,50 @@ def solution(dots):
 
 
 # 다항식 더하기
+import re
 
+def solution(polynomial):
+    answer = ''
+    lst = polynomial.split()
+
+    const = 0
+    coef = 0
+
+    for i in lst[::2]:
+        print(i)
+        if 'x' not in i:
+            const += int(i)
+        else:
+            if i == 'x':
+                coef += 1 
+            else:
+                reg = re.compile('[0-9]{1,}')
+                coef += int(reg.match(i)[0])
+
+    print('coefficient:',coef,'const:',const)
+
+    if coef == 0:
+        answer += str(const)
+
+    elif coef == 1:
+        if const != 0:
+            answer += 'x' 
+            answer += ' + '
+            answer += str(const)
+        else:
+            answer += 'x' 
+
+    else:
+        if const != 0:
+            answer += str(coef)
+            answer += 'x' 
+            answer += ' + '
+            answer += str(const)
+        else:
+            answer += str(coef)
+            answer += 'x' 
+
+    return answer
 
 
 # Day 21 문자열, 사칙연산, 시뮬레이션, 2차원배열, 수학, 배열
