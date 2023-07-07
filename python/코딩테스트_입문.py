@@ -847,3 +847,27 @@ def solution(my_string):
 # 외계어 사전
 
 
+# Day 22 dp, 수학, 조건문, 배열
+# 저주의 숫자 3
+def solution(n):
+    count10 = 0
+    count3 = 0
+    while count10 < n:
+        count10 += 1
+        count3 += 1
+        while count3 % 3 == 0 or '3' in str(count3):
+            count3 += 1
+    return count3
+
+
+# 평행
+
+
+
+# 겹치는 선분의 길이
+
+
+
+# 유한소수 판별하기
+
+
