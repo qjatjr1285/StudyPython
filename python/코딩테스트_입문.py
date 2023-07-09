@@ -841,7 +841,20 @@ def solution(my_string):
 
 
 # 삼각형의 완성조건 (2)
-
+def solution(sides):
+    sides.sort()
+    m = max(sides)
+    cnt = 0
+    # 가장 긴 변이 sides 안에 있을때
+    for i in range(m+1):
+        if sides[0] + i > m:
+            cnt += 1
+    
+    # 가장 긴 변이 나머지 한 변일 때
+    for i in range(sum(sides)+1):
+        if sides[1] < i and i < sum(sides):
+            cnt += 1
+    return cnt
 
 
 # 외계어 사전
