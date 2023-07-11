@@ -858,7 +858,12 @@ def solution(sides):
 
 
 # 외계어 사전
-
+def solution(spell, dic):
+    spell = set(spell)
+    for s in dic:
+        if not spell-set(s):
+            return 1
+    return 2
 
 # Day 22 dp, 수학, 조건문, 배열
 # 저주의 숫자 3
